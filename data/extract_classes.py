@@ -3,7 +3,7 @@ import os
 import shutil
 
 
-def split_data(source, classes):
+def extract_classes(source, classes):
 
     dirname = os.path.dirname(__file__)
     source_directory = os.path.join(dirname, source)
@@ -20,4 +20,4 @@ def split_data(source, classes):
                 shutil.move(os.path.join(source_directory, filename), os.path.join(dirname,c, filename))
 
 
-split_data("raw" , ["cat" , "dog"])
+extract_classes("raw" , ["cat" , "dog"])
